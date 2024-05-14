@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inversor de Texto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #inputText, #outputText {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+    #outputText {
+      border: 1px solid #ccc;
+      min-height: 50px;
+      padding: 10px;
+    }
+    #outputText span {
+      font-weight: bold;
+    }
+    #invertButton {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Inversor de Texto</h1>
+    <textarea id="inputText" placeholder="Escribe tu texto aquí"></textarea>
+    <button id="invertButton">Invertir Texto</button>
+    <div id="outputText"></div>
+  </div>
+
+  <script src="invertirTexto.js"></script>
+</body>
+</html>
