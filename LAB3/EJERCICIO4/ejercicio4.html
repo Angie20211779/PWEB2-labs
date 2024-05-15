@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extraer Código de Google Meet</title>
+</head>
+<body>
+    <h1>Extraer Código de Google Meet</h1>
+    <form id="meetForm">
+        <label for="meetUrl">Ingrese el URL de la sesión de Google Meet:</label><br><br>
+        <input type="text" id="meetUrl" name="meetUrl" required>
+        <button type="submit">Obtener Código</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('meetForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const url = document.getElementById('meetUrl').value;
+            const code = extractMeetCode(url);
+            document.getElementById('result').textContent = code ? `Código de la sesión: ${code}` : 'URL no válida';
+        });
+
+        function extractMeetCode(url) {
+            // Regex para capturar el código de Google Meet
+            const meetRegex = /https:\/\/meet\.google\.com\/([a-z]{3}-[a-z]{4}-[a-z]{3})/;
+            const match = url.match(meetRegex);
+            if (match && match[1]) {
+                // Eliminar los guiones del código
+                return match[1].replace(/-/g, '');
+            } else {
+                return null;
+            }
+        }
+    </script>
+</body>
+</html>
