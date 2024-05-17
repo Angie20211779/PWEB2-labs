@@ -1,6 +1,5 @@
 
 const eventoFecha= new Date("2024-08-15");
-
 function calcularDiasFaltantes(fechaFuturo) {
   const hoy = new Date();
   
@@ -14,8 +13,6 @@ function calcularDiasFaltantes(fechaFuturo) {
   const diasFaltantes = Math.ceil(diferenciaEnSegundos / segundosEnUnDia);
   return diasFaltantes;
 }
-
-
 function mostrarDiasFaltantes() {
   const contador = document.getElementById('contador');
   const diasFaltantes = calcularDiasFaltantes(eventoFecha);
