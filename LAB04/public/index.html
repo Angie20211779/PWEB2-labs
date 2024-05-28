@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="main-container">
+        <h1>Registro de peliculas</h1>
+        <form action="/new" method="POST">
+            <p>
+                <label for=""> Nombre de las peliculas</label><br/>
+                <input type="text" name="Nombre" id="Nombre">
+            </p>
+            <p>
+                <label for=""> Calificación</label><br/>
+                <input type="range" min="0" max="10" name="rating" id="rating">
+            </p>
+            <input type="button" value="Registrar una pelicula" id="bSubmit">
+        </form>
+    </div>
+</body>
+</html>
